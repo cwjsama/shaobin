@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html><head>
+	    <meta charset="utf-8">
+    <title>仓库管理系统</title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="../../admin/style/bootstrap.css" rel="stylesheet">
+    <link href="../../admin/style/font-awesome.css" rel="stylesheet">
+    <link href="../../admin/style/weather-icons.css" rel="stylesheet">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="../../admin/style/beyond.css" rel="stylesheet" type="text/css">
+    <link href="../../admin/style/demo.css" rel="stylesheet">
+    <link href="../../admin/style/typicons.css" rel="stylesheet">
+    <link href="../../admin/style/animate.css" rel="stylesheet">
+
+    
+</head>
+<body>
+	<!-- 头部 -->
+	<div id="top"></div>
+	<!-- /头部 -->
+	
+	<div class="main-container container-fluid">
+		<div class="page-container">
+			<!-- Page Sidebar -->
+            <div id="left"></div>
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                                        <li>
+                        <a href="../Index/index.htm">系统</a>
+                    </li>
+                                        <li>
+                        <a href="../out/lst.htm">出库列表</a>
+                    </li>
+                                        <li class="active">添加出库</li>
+                                        </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+
+                <!-- Page Body -->
+                <div class="page-body">
+                    
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-header bordered-bottom bordered-blue">
+                <span class="widget-caption">添加出库</span>
+            </div>
+            <div class="widget-body">
+                <div id="horizontal-form">
+                    <form class="form-horizontal" id="addOutProdFrom" role="form" action="" method="post">
+                        <div class="form-group">
+                            <label for="outProduct_id" class="col-sm-2 control-label no-padding-right">出库ID</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" disabled="disabled" id="outProduct_id" placeholder="" name="catename" required type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="purchase" class="col-sm-2 control-label no-padding-right">客户商</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="purchase" placeholder="" name="catename" required type="text">
+                            </div>
+							<p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="administrator" class="col-sm-2 control-label no-padding-right">经手人</label>
+                            <div class="col-sm-6">
+                                <select id="administrator" name="administrator" style="float: left">
+                                    <option value="">手动输入</option>
+                                </select>
+                                <input class="form-control" style="width: 20%;float: left;margin-left: 20px" id="administrator2" placeholder="" name="administrator" type="text">
+                                <p class="help-block col-sm-4 red">* 必填</p>
+                            </div>
+                        </div>
+						<div class="form-group">
+                            <label for="timeData" class="col-sm-2 control-label no-padding-right">出库时间</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="timeData" placeholder="" name="keywords" type="text" onclick="laydate()">
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+						<div class="form-group">
+                            <label for="remark" class="col-sm-2 control-label no-padding-right">备注</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="remark" placeholder="" name="desc" type="text">
+                            </div>
+                         </div>
+                        <div class="form-group">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-6">
+                                <img class="img-responsive" id="code">
+                            </div>
+                            <a href="javascript:AddInproduct.onLoadCode()">刷新条形码</a>
+                        </div>
+						<div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="button" class="btn btn-default">提交</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+		</div>	
+	</div>
+
+	    <!--Basic Scripts-->
+    <script src="../../admin/style/jquery_002.js"></script>
+    <script src="../../admin/style/bootstrap.js"></script>
+    <script src="../../admin/style/jquery.js"></script>
+    <script src="../../laydate/laydate.js"></script>
+    <!--Beyond Scripts-->
+    <script src="../../admin/style/beyond.js"></script>
+    <script src="../../admin/style/interface.js"></script>
+    <script>
+        $(function () {
+            AddOutProduct.init();
+        })
+    </script>
+
+</body></html>

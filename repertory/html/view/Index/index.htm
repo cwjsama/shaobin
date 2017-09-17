@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html><head>
+	    <meta charset="utf-8">
+    <title>仓库管理系统</title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="../../admin/style/bootstrap.css" rel="stylesheet">
+    <link href="../../admin/style/font-awesome.css" rel="stylesheet">
+    <link href="../../admin/style/weather-icons.css" rel="stylesheet">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="../../admin/style/beyond.css" rel="stylesheet" type="text/css">
+    <link href="../../admin/style/demo.css" rel="stylesheet">
+    <link href="../../admin/style/typicons.css" rel="stylesheet">
+    <link href="../../admin/style/animate.css" rel="stylesheet">
+    
+</head>
+<body id="index">
+	<!-- 头部 -->
+    <div id="top"></div>
+	<!-- /头部 -->
+	
+	<div class="main-container container-fluid">
+		<div class="page-container">
+			<!-- Page Sidebar -->
+            <div id="left"></div>
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                                        <li class="active">控制面板</li>
+                                        </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+
+                <!-- Page Body -->
+                <div class="page-body">
+                    
+				<div style="text-align:center; line-height:500%; font-size:24px;">
+                    条码查询系统
+                </div>
+                    <div class="row  col-md-10 col-md-offset-1">
+                        <div class="col-lg-12 col-sm-12 col-xs-12">
+                            <div class="widget">
+                                <div class="widget-body">
+                                    <div class="flip-scroll">
+                                        <div class="form-group col-md-6 pull-right" style="padding-right: 0">
+                                            <div class="input-group">
+                                                <input autofocus type="text" id="productText" class="form-control" id="exampleInputAmount" placeholder="条形码编号">
+                                                <div id="btn" class="input-group-addon" style="cursor:pointer">&nbsp;&nbsp;<i class="searchicon fa fa-search"></i>&nbsp;&nbsp;</div>
+                                            </div>
+                                        </div>
+                                        <table class="table table-bordered table-hover">
+                                            <thead class="">
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                        </table>
+                                        <h3 id="result" class="center-block text-danger text-center"></h3>
+                                    </div>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+		</div>	
+	</div>
+
+	    <!--Basic Scripts-->
+    <script src="../../admin/style/jquery_002.js"></script>
+    <script src="../../admin/style/bootstrap.js"></script>
+    <script src="../../admin/style/jquery.js"></script>
+    <!--Beyond Scripts-->
+    <script src="../../admin/style/beyond.js"></script>
+    <script src="../../admin/style/interface.js"></script>
+    <script>
+		$(function(){
+			product.init();
+		})
+    </script>
+    
+
+
+</body></html>

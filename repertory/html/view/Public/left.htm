@@ -1,0 +1,95 @@
+            <div class="page-sidebar" id="sidebar">
+                <!-- Page Sidebar Header-->
+                <div class="sidebar-header-wrapper">
+                    <input class="searchinput" placeholder="搜索" type="text">
+                    <i id="searchBtn" class="searchicon fa fa-search"></i>
+                    <div class="searchhelper">请输入关键字</div>
+                </div>
+                <!-- /Page Sidebar Header -->
+                <!-- Sidebar Menu -->
+                <ul class="nav sidebar-menu">
+                    <!--Dashboard-->
+                    <li>
+                        <a href="#" class="menu-dropdown">
+                            <i class="menu-icon fa fa-user"></i>
+                            <span class="menu-text">管理员</span>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="../Admin/lst.htm">
+                                    <span class="menu-text">
+                                        管理员列表                                    </span>
+                                    <i class="menu-expand"></i>
+                                </a>
+                            </li>
+							<li>
+                                <a href="../Admin/add.htm">
+                                    <span class="menu-text">
+                                        添加管理员                                    </span>
+                                    <i class="menu-expand"></i>
+                                </a>
+                            </li>
+                        </ul>                            
+                    </li> 
+					
+					<li>
+                        <a href="#" class="menu-dropdown">
+                            <i class="menu-icon fa fa-folder"></i>
+                            <span class="menu-text">仓库管理</span>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="../Cate/lst.htm">
+                                    <span class="menu-text">
+                                        入库列表                                 </span>
+                                    <i class="menu-expand"></i>
+                                </a>
+                            </li>
+							<li>
+                                <a href="../out/lst.htm">
+                                    <span class="menu-text">
+                                        出库列表                                  </span>
+                                    <i class="menu-expand"></i>
+                                </a>
+                            </li>
+                        </ul>                            
+                    </li>
+                </ul>
+                <!-- /Sidebar Menu -->
+            </div>
+            <script>
+            	$(function(){
+					var searchicon = $("#searchBtn");
+					var searchinput = $(".searchinput");
+					var str = window.location.href;
+					str=str.substring(0,str.lastIndexOf("/"));
+					str = str.substring(str.lastIndexOf("/")+1);
+					
+					searchinput.keyup(function (e) {//捕获文档对象的按键弹起事件  
+						if (e.keyCode == 13) {//按键信息对象以参数的形式传递进来了  
+							searchFun();
+						}  
+					});
+					searchicon.click(function(){
+						searchFun();
+					});
+					function searchFun(){
+						var searchText = searchinput.val();
+						if(searchText==""){
+							alert("搜索关键字不能为空");
+							return;
+						}
+						if(str=="index" || str=="Index"){
+							window.location.href = "../"+str+"/index.htm?searchText="+searchinput.val();
+						}else{
+							if(confirm("是否打开新的窗口？")){
+								window.open("../"+str+"/lst.htm?searchText="+searchinput.val());
+							}else{
+								window.location.href="../"+str+"/lst.htm?searchText="+searchinput.val();
+							}				
+						}
+					}
+				})
+            </script>

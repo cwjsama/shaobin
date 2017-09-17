@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <title>仓库管理系统</title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="../../admin/style/bootstrap.css" rel="stylesheet">
+    <link href="../../admin/style/font-awesome.css" rel="stylesheet">
+    <link href="../../admin/style/weather-icons.css" rel="stylesheet">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="../../admin/style/beyond.css" rel="stylesheet" type="text/css">
+    <link href="../../admin/style/demo.css" rel="stylesheet">
+    <link href="../../admin/style/typicons.css" rel="stylesheet">
+    <link href="../../admin/style/animate.css" rel="stylesheet">
+
+</head>
+<body>
+
+<!--打印控件-->
+<script language="javascript" src="../../admin/style/LodopFuncs.js"></script> 
+<object  id="LODOP_OB" classid="clsid:2105C259-1E0C-4534-8141-A753534CB4CA" width=0 height=0>  
+       <embed id="LODOP_EM" type="application/x-print-lodop" width=0 height=0></embed> 
+</object> 
+
+<!-- 头部 -->
+<div id="top"></div>
+<!-- /头部 -->
+
+<div class="main-container container-fluid">
+    <div class="page-container">
+        <!-- Page Sidebar -->
+        <div id="left"></div>
+        <!-- /Page Sidebar -->
+        <!-- Page Content -->
+        <div class="page-content">
+            <!-- Page Breadcrumb -->
+            <div class="page-breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="../Index/index.htm">系统</a>
+                    </li>
+                    <li class="active">打印条形码</li>
+                </ul>
+            </div>
+            <!-- /Page Breadcrumb -->
+
+            <!-- Page Body -->
+            <div class="page-body">
+
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-xs-12">
+                        <div class="widget">
+                            <div class="widget-header bordered-bottom bordered-blue">
+                                <span class="widget-caption">打印条形码</span>
+                            </div>
+                            <div class="widget-body">
+                                <div id="horizontal-form">
+                                    <form class="form-horizontal" role="form" action="" method="post">
+                                        <div class="form-group">
+                                            <div class="col-sm-2"></div>
+                                            <div class="col-sm-6" id="barCode">
+                                                <img class="img-responsive" id="code">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-2"></div>
+                                            <div class="col-sm-6">
+                                                <a href="javascript:void('')">刷新条形码</a>                                                &nbsp;&nbsp;<a href="javascript:Code.printme()" target="_self">打印</a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /Page Body -->
+        </div>
+        <!-- /Page Content -->
+    </div>
+</div>
+
+<!--Basic Scripts-->
+<script src="../../admin/style/jquery_002.js"></script>
+<script src="../../admin/style/bootstrap.js"></script>
+<script src="../../admin/style/jquery.js"></script>
+<!--Beyond Scripts-->
+<script src="../../admin/style/beyond.js"></script>
+<script src="../../admin/style/interface.js"></script>
+<script>
+	$(function () {
+		Code.init();
+	})
+</script>
+</body></html>
